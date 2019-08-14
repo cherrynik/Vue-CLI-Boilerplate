@@ -30,7 +30,7 @@ const common = merge([
     output: {
       filename: 'assets/js/[name].[hash].js',
       path: PATHS.build,
-      publicPath: '/'
+      publicPath: './'
     },
     optimization: {
       splitChunks: {
