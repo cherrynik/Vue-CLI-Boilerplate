@@ -16,7 +16,6 @@ Now you can use the next commands:
 [More about it...](#Development/Production-modes)
 
 ## Development/Production modes
-===
 In the project we have the modes:
 1. Development (`--mode=development`)
 2. Production (`--mode=production`)
@@ -39,7 +38,6 @@ module.exports =  function () {
 ```
 
 *(In the variable `common` we have base data, that webpack always uses in every mode.)*
-
 ```js
 const common = merge([
   ...
@@ -56,7 +54,7 @@ const common = merge([
 ]);
 ```
 
-3.1 But if you want to call it in the development or production mode, look at these rows in [webpack.config.js](https://github.com/ighosta9/webpack-ideal/blob/master/webpack.config.js), at the end:
+4. But if you want to call it in the development or production mode, look at these rows in [webpack.config.js](https://github.com/ighosta9/webpack-ideal/blob/master/webpack.config.js), at the end:
 ```js
 module.exports = function(env, argv) {
   if (argv.mode === 'production') {
