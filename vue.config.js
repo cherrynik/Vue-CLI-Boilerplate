@@ -6,6 +6,7 @@ const PATHS = {
 };
 
 module.exports = {
+  publicPath: './',
   assetsDir: 'assets',
   chainWebpack: config => {
     const svgRule = config.module.rule('svg');

@@ -9,7 +9,8 @@
   "scripts": {
     "dev": "vue-cli-service serve --open --mode=development",
     "build": "vue-cli-service build --progress --hide-modules --mode=production",
-    "inspect": "vue inspect > output.js"
+    "inspect": "vue inspect > output.js",
+    "server": "static dist"
   },
   "browsersList": [
     "> 1%",
@@ -29,6 +30,7 @@
     "file-loader": "^4.2.0",
     "mini-css-extract-plugin": "^0.4.5",
     "node-sass": "^4.12.0",
+    "node-static": "^0.7.11",
     "path": "^0.12.7",
     "postcss-loader": "^3.0.0",
     "pug": "^2.0.4",
