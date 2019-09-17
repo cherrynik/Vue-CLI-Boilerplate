@@ -26,7 +26,7 @@ const NameOfDependency = require('./devDependencies/name-of-dependency.js')
 ```
 
 So, dependency, that you want to tune, you can tune it is as:
-1. Run your file of dependency, for example: [./devDependencies/svg-sprite-loader.js](https://github.com/ighosta9/webpack-ideal/blob/master/devDependencies/svg-sprite-loader.js).
+1. Open your file of dependency, for example: [./devDependencies/svg-sprite-loader.js](https://github.com/ighosta9/webpack-ideal/blob/master/devDependencies/svg-sprite-loader.js).
 2. And write settings here:
 
 ```js
