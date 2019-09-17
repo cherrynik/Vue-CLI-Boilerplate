@@ -35,7 +35,7 @@ module.exports =  function () {
                 },
               ],
             }, {
-              issuer: { include: [/\.(s(a|c)|c)ss$/, /\.pug$/] },
+              issuer: { include: [/\.(s(a|c)|c)ss$/, /\.pug$/, /\.vue$/] },
               use: [
                 {
                   loader: 'file-loader',
