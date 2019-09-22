@@ -23,10 +23,5 @@ export default new Router({
 
       // component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
     },
-    {
-      path: '*',
-      name: 'home',
-      component: Home,
-    },
   ],
 });

@@ -1,0 +1,17 @@
+.container {
+  position: relative;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+
+  background-color: pink;
+  background-image: url('../../../public/img/icon-add.svg');
+  background-image: url('../../../public/img/icons/icon-box.svg');
+  background-image: url('../../../public/img/webpack.png');
+}
+
+@font-face {
+  font-family: 'Regular';
+  src: local('☺'), url('../fonts/1/Regular.otf') format('otf'), url('../fonts/1/Regular.svg') format('svg');
+}

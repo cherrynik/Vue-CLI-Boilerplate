@@ -1,4 +1,4 @@
-<template lang="pug">
+<template lang='pug'>
   mixin hello()
     ul
       li Hmmm OKAY
@@ -15,16 +15,15 @@
       .external-svg
         icon
       p= arr
-    img(src='../../public/img/webpack.png')
+    img(src='@public/img/webpack.png')
     img(src='../../public/img/icon-add.svg')
     p {{ message }}
     +hello()
 </template>
 
 <script>
-// eslint-disable-next-line
-import inline from '../../public/img/icons/icon-amex.svg?inline';
-import icon from '../../public/img/icons/icon-add.svg';
+import inline from '@public/img/icons/icon-amex.svg?inline';
+import icon from '@public/img/icons/icon-add.svg';
 
 export default {
   name: 'Example',
@@ -45,15 +44,19 @@ export default {
 };
 </script>
 
-<style lang="sass" scoped>
-  // 132
-  .container
-    display: flex
-    align-items: center
-    flex-direction: column
-    color: white
-    background-image: url('../../public/img/icons/icon-arrow.svg')
+<style lang="scss" scoped>
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-  img
-    width: 150px
+    color: white;
+
+    background-image: url('../../public/img/icons/icon-arrow.svg');
+  }
+
+  img {
+    width: 150px;
+  }
+
 </style>

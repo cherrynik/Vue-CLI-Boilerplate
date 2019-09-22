@@ -1,17 +1,27 @@
 {
   "env": {
-      "browser": true,
-      "es6": true,
-      "node": true
+    "browser": true,
+    "es6": true,
+    "node": true
   },
   "parserOptions": {
-       "parser": "babel-eslint"
-   },
+    "parser": "babel-eslint"
+  },
   "extends": [
-      "airbnb-base",
-      "plugin:vue/recommended"
+    "airbnb-base",
+    "plugin:vue/recommended"
   ],
   "rules": {
-    "linebreak-style": 0
+    "linebreak-style": 0,
+    "jsx-quotes": ["error", "prefer-single"],
+    "global-require": 0,
+    "import/no-dynamic-require": 0,
+    "import/no-unresolved": 0,
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ]
   }
 }

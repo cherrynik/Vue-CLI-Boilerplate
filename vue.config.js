@@ -1,8 +1,9 @@
 const path = require('path');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 const PATHS = {
-  source: path.join(__dirname, './src'),
-  build: path.join(__dirname, './dist'),
+  source: path.resolve(__dirname, './src'),
+  build: path.resolve(__dirname, './dist'),
 };
 
 module.exports = {
@@ -110,6 +111,13 @@ module.exports = {
       },
       extensions: ['*', '.js', '.vue', '.json'],
     },
+    plugins: [
+      new StyleLintPlugin({
+        configFile: './.stylelintrc.json',
+        files: ['./src/**/*.{vue,css,scss,sass}'],
+        syntax: 'scss',
+      }),
+    ],
   },
   css: { sourceMap: process.env.NODE_ENV !== 'production' },
   runtimeCompiler: true,
