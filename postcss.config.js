@@ -1,3 +1,5 @@
+/* eslint-disable global-require */
+
 module.exports = {
   plugins: [
     require('autoprefixer'),
@@ -6,10 +8,10 @@ module.exports = {
       preset: [
         'default', {
           discardComments: {
-            removeAll: true
-          }
-        }
-      ]
-    })
-  ]
-}
+            removeAll: true,
+          },
+        },
+      ],
+    }),
+  ],
+};

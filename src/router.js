@@ -4,7 +4,7 @@ import Router from 'vue-router';
 Vue.use(Router);
 
 // import Home from './views/Home.vue';
-const Home = () => import('./views/Home.vue')
+const Home = () => import('./views/Home.vue');
 
 export default new Router({
   routes: [
@@ -27,6 +27,6 @@ export default new Router({
       path: '*',
       name: 'home',
       component: Home,
-    }
+    },
   ],
 });

@@ -19,36 +19,37 @@
     img(src='../../public/img/icon-add.svg')
     p {{ message }}
     +hello()
-  
 </template>
 
 <script>
-import inline from '../../public/img/icons/icon-amex.svg?inline'
-import icon from '../../public/img/icons/icon-add.svg'
+// eslint-disable-next-line
+import inline from '../../public/img/icons/icon-amex.svg?inline';
+import icon from '../../public/img/icons/icon-add.svg';
 
 export default {
-  name: 'example',
+  name: 'Example',
   components: {
-    inline
+    inline,
   },
   computed: {
     externalSVG() {
       return icon;
     },
   },
-  data () {
+  // eslint-disable-next-line
+  data() {
     return {
       message: 'Zdarova',
-    }
-  }
-}
+    };
+  },
+};
 </script>
 
 <style lang="sass" scoped>
+  // 132
   .container
     display: flex
     align-items: center
-    
     flex-direction: column
     color: white
     background-image: url('../../public/img/icons/icon-arrow.svg')

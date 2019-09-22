@@ -13,13 +13,14 @@
   output: {
     path: 'D:\\Code\\boilerplate\\dist',
     filename: '[name].js',
-    publicPath: '/',
+    publicPath: '',
     globalObject: '(typeof self !== \'undefined\' ? self : this)'
   },
   resolve: {
     alias: {
       '@': 'D:\\Code\\boilerplate\\src',
-      vue$: 'vue/dist/vue.esm.js'
+      vue$: 'vue/dist/vue.esm.js',
+      '@public': 'D:\\Code\\boilerplate\\public'
     },
     extensions: [
       '.mjs',
@@ -41,6 +42,7 @@
   },
   resolveLoader: {
     modules: [
+      'D:\\Code\\boilerplate\\node_modules\\@vue\\cli-plugin-eslint\\node_modules',
       'node_modules',
       'D:\\Code\\boilerplate\\node_modules',
       'D:\\Code\\boilerplate\\node_modules\\@vue\\cli-service\\node_modules'
@@ -57,7 +59,7 @@
             loader: 'cache-loader',
             options: {
               cacheDirectory: 'D:\\Code\\boilerplate\\node_modules\\.cache\\vue-loader',
-              cacheIdentifier: '20aded90'
+              cacheIdentifier: 'c72aef1a'
             }
           },
           {
@@ -67,7 +69,7 @@
                 preserveWhitespace: false
               },
               cacheDirectory: 'D:\\Code\\boilerplate\\node_modules\\.cache\\vue-loader',
-              cacheIdentifier: '20aded90'
+              cacheIdentifier: 'c72aef1a'
             }
           }
         ]
@@ -85,7 +87,7 @@
           {
             loader: 'file-loader',
             options: {
-              outputPath: url => url.slice(url.indexOf(`/img/`) + 1),
+              outputPath: (url) => url.slice(url.indexOf('/img/') + 1),
               name: '[path][name].[ext]'
             }
           }
@@ -119,7 +121,7 @@
           {
             loader: 'file-loader',
             options: {
-              outputPath: url => url.slice(url.indexOf(`/assets/fonts`) + 1),
+              outputPath: (url) => url.slice(url.indexOf('/assets/fonts') + 1),
               name: '[path][name].[ext]'
             }
           }
@@ -933,6 +935,33 @@
           }
         ]
       },
+      /* config.module.rule('eslint') */
+      {
+        enforce: 'pre',
+        test: /\.(vue|(j|t)sx?)$/,
+        exclude: [
+          /node_modules/,
+          'D:\\Code\\boilerplate\\node_modules\\@vue\\cli-service\\lib'
+        ],
+        use: [
+          {
+            loader: 'eslint-loader',
+            options: {
+              extensions: [
+                '.js',
+                '.jsx',
+                '.vue'
+              ],
+              cache: true,
+              cacheIdentifier: '5be9f016',
+              emitWarning: true,
+              emitError: false,
+              eslintPath: 'D:\\Code\\boilerplate\\node_modules\\eslint',
+              formatter: function () { /* omitted long function */ }
+            }
+          }
+        ]
+      },
       {
         test: /\.js$/,
         loader: 'babel-loader',
@@ -965,7 +994,7 @@
       {
         'process.env': {
           NODE_ENV: '"development"',
-          BASE_URL: '"/"'
+          BASE_URL: '""'
         }
       }
     ),
