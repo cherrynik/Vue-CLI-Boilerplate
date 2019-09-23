@@ -5,8 +5,11 @@ Vue.use(Router);
 
 // import Home from './views/Home.vue';
 const Home = () => import('./views/Home.vue');
+const NotFound = { template: '<p>Page not found</p>' };
+const About = { template: '<p>About</p>' };
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -16,12 +19,11 @@ export default new Router({
     {
       path: '/about',
       name: 'about',
-
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-
-      // component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
+      component: About,
+    },
+    {
+      path: '*',
+      component: NotFound,
     },
   ],
 });
