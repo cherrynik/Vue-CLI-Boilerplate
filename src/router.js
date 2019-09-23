@@ -9,7 +9,7 @@ const NotFound = { template: '<p>Page not found</p>' };
 const About = { template: '<p>About</p>' };
 
 export default new Router({
-  mode: 'history',
+  mode: 'hash',
   routes: [
     {
       path: '/',

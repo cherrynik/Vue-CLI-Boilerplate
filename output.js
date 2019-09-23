@@ -20,7 +20,8 @@
     alias: {
       '@': 'D:\\Code\\boilerplate\\src',
       vue$: 'vue/dist/vue.esm.js',
-      '@public': 'D:\\Code\\boilerplate\\public'
+      '@public': 'D:\\Code\\boilerplate\\public',
+      '@styles': 'D:\\Code\\boilerplate\\src\\assets\\styles'
     },
     extensions: [
       '.mjs',
@@ -59,7 +60,7 @@
             loader: 'cache-loader',
             options: {
               cacheDirectory: 'D:\\Code\\boilerplate\\node_modules\\.cache\\vue-loader',
-              cacheIdentifier: '6596d704'
+              cacheIdentifier: 'ba2448d0'
             }
           },
           {
@@ -69,7 +70,7 @@
                 whitespace: 'condense'
               },
               cacheDirectory: 'D:\\Code\\boilerplate\\node_modules\\.cache\\vue-loader',
-              cacheIdentifier: '6596d704'
+              cacheIdentifier: 'ba2448d0'
             }
           }
         ]
@@ -973,7 +974,7 @@
                 '.vue'
               ],
               cache: true,
-              cacheIdentifier: '5c8a5ad0',
+              cacheIdentifier: '7575b681',
               emitWarning: false,
               emitError: false,
               eslintPath: 'D:\\Code\\boilerplate\\node_modules\\eslint',
