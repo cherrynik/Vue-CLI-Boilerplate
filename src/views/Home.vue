@@ -12,9 +12,8 @@
     .div
       inline
       img(:src="externalSVG")
-      .external-svg
-        icon
-      p= arr
+    p(:class="$style.red")
+      | 123
     img(src='@public/img/webpack.png')
     img(src='../../public/img/icon-add.svg')
     p {{ message }}
@@ -60,3 +59,5 @@ export default {
   }
 
 </style>
+
+<style lang="scss" src="@styles/modules/_carousel.module.scss" module></style>
