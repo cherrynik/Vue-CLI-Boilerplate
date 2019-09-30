@@ -1,63 +1,109 @@
 <template lang='pug'>
-  mixin hello()
-    ul
-      li Hmmm OKAY
-  - let arr = 'Mother Fuck'
-  .container
-    p hello there.
-    .col-wrap
-      i.icon.icon-1
-      i.icon.icon-2
-      i.icon.icon-3
-    .div
-      inline
-      img(:src="externalSVG")
-    p(:class="$style.red")
-      | 123
-    img(src='@public/img/webpack.png')
-    img(src='../../public/img/icon-add.svg')
-    p {{ message }}
-    +hello()
+  .HiScreen.container
+    Greeting
+    hr
+
+    .HiScreen__icons.col-12.row.m-0.p-0
+      .col-4.icons__item.pl-0
+        p.item__sub
+          | SVG Inline
+        Visa.icon
+      .col-4.icons__item
+        p.item__sub.sub_center
+          | SVG Img
+        img.icon(:src="AmEx" :class="$style.icon_centered")
+      .col-4.icons__item.pr-0
+        p.item__sub.sub_right
+          | SVG Styled Background
+        .icon(:class="$style.icon_right")
+
+    hr
+
+    div(:class="$style.imgGroup")
+      img.imgGroup__item(src='@public/img/icon-add.svg')
+      a.imgGroup__link(href='#') {{ message }}
+      img.imgGroup__item(src='../../public/img/webpack.png')
 </template>
 
 <script>
-import inline from '@public/img/icons/icon-amex.svg?inline';
-import icon from '@public/img/icons/icon-add.svg';
+import Visa from '@public/img/icons/icon-visa.svg?inline';
+import AmEx from '@public/img/icons/icon-amex.svg';
+
+import Greeting from '@/block/common/components/example/example.vue';
 
 export default {
   name: 'Example',
   components: {
-    inline,
+    Visa,
+    Greeting,
   },
   computed: {
-    externalSVG() {
-      return icon;
-    },
+    AmEx() { return AmEx; },
   },
   // eslint-disable-next-line
   data() {
     return {
-      message: 'Zdarova',
+      message: 'Click me.',
     };
   },
 };
 </script>
 
 <style lang="scss" scoped>
-  .container {
-    display: flex;
-    flex-direction: column;
+  .HiScreen {
     align-items: center;
-
-    color: white;
-
-    background-image: url('../../public/img/icons/icon-arrow.svg');
+    justify-content: center;
   }
 
-  img {
-    width: 150px;
+  .icons {
+
+    &__item {
+
+      .icon {
+        display: block;
+      }
+    }
   }
 
+  .sub {
+
+    &_center {
+      text-align: center;
+    }
+
+    &_right {
+      text-align: right;
+    }
+  }
+
+  .imgGroup {
+
+    &__item {
+      width: 128px;
+      height: 128px;
+    }
+  }
 </style>
 
-<style lang="scss" src="@styles/modules/_carousel.module.scss" module></style>
+<style lang="scss" module>
+  .icon_centered {
+    margin: 0 auto;
+  }
+
+  .icon_right {
+    width: 48px;
+    height: 48px;
+    margin-left: auto;
+
+    background-image: url('../../public/img/icons/icon-mastercard.svg');
+  }
+
+  .imgGroup {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+  }
+</style>

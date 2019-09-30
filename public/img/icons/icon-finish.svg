@@ -1,7 +1,0 @@
-<svg class="icon__vector" fill="white" width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-<path d="M10 12H13V15H10V12Z" />
-<path d="M13 9H16V12H13V9Z" />
-<path d="M19 9H22V12H19V9Z" />
-<path d="M16 12H19V15H16V12Z" />
-<path fill-rule="evenodd" clip-rule="evenodd" d="M7 28H5V4H27V20H7V28ZM13 9V6H16V9H19V6H22V9H25V12H22V15H25V18H22V15H19V18H16V15H13V18H10V15H7V12H10V9H7V6H10V9H13Z" />
-</svg>
