@@ -18,8 +18,19 @@
 2. SCSS Architecture - [Aesthetic](https://scotch.io/tutorials/aesthetic-sass-1-architecture-and-style-organization)
 
 3. JavaScript - [Airbnb](https://github.com/airbnb/javascript)
----
 
-SCSS Structure
-3. SVG Including in Vue
-4. Media/Fonts Including (SCSS)
+# SASS/SCSS Fonts including
+
+* Fonts are stored at the `./src/assets/fonts`
+
+```scss
+@include font-face(
+  'Example', // Font name
+  '../fonts/Example/Example', // Path to font that is relatived off main.scss
+  null, // Font weight
+  normal, // Font style
+  svg ttf // Font extensions
+);
+```
+---
+1. SVG Including in Vue

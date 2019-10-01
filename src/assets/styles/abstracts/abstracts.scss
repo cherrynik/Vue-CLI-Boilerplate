@@ -2,3 +2,11 @@
   'functions',
   'mixins',
   'placeholders';
+
+@include font-face(
+  'Example', // Font name
+  '../fonts/Example/Example', // Path to font that's relatived off main.scss
+  null, // Font weight
+  normal, // Font style
+  svg ttf // Font extensions
+);
