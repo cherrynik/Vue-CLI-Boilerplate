@@ -86,14 +86,15 @@ export default {
 ```pug
 <template lang='pug'>
   // ...
-  div(:class="$style.icon_right")
+  div(:class="$style.icon_right") // It includes by SCSS Module
   // ...
 </template>
 
-<style lang="scss" module>
+<style lang="scss" module> // SCSS Module
   .icon_right {
     // ...
-    background-image: url('../../public/img/icons/icon-mastercard.svg'); // Relative path off current file (./src/views/Home.vue)
+    background-image: url('../../public/img/icons/icon-mastercard.svg');
+    /* Relative path from current file (./src/views/Home.vue) */
   }
 </style>
 ```
