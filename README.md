@@ -32,5 +32,27 @@
   svg ttf // Font extensions
 );
 ```
----
-1. SVG Including in Vue
+
+# SVG Including in Vue
+
+1. First example:
+
+```pug
+<template lang='pug'>
+  // ...
+  Visa.icon
+  // ...
+</template>
+
+<script>
+import Visa from '@public/img/icons/icon-visa.svg?inline';
+
+export default {
+  // ...
+  components: {
+    Visa,
+  },
+  // ...
+};
+</script>
+```
