@@ -113,7 +113,7 @@ export default {
   .icon {
     // ...
     background-image: url('../../public/img/icons/icon-mastercard.svg');
-    /* Relative path from current file (./src/views/Home.vue) */
+    /* Relative path from the current file (./src/views/Home.vue) */
     // ...
   }
 </style>
