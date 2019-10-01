@@ -95,6 +95,26 @@ export default {
     // ...
     background-image: url('../../public/img/icons/icon-mastercard.svg');
     /* Relative path from current file (./src/views/Home.vue) */
+    // ...
+  }
+</style>
+```
+
+And you can also do it like this:
+
+```pug
+<template lang='pug'>
+  // ...
+  .icon // It includes by normal className
+  // ...
+</template>
+
+<style lang="scss"> // Not SCSS Module
+  .icon {
+    // ...
+    background-image: url('../../public/img/icons/icon-mastercard.svg');
+    /* Relative path from current file (./src/views/Home.vue) */
+    // ...
   }
 </style>
 ```
