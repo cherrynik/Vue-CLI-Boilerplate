@@ -35,12 +35,12 @@
 
 # SVG Including in Vue
 
-1. First example:
+1. Inline SVG:
 
 ```pug
 <template lang='pug'>
   // ...
-  Visa.icon
+  Visa
   // ...
 </template>
 
@@ -51,6 +51,30 @@ export default {
   // ...
   components: {
     Visa,
+  },
+  // ...
+};
+</script>
+```
+
+2. By img tag:
+
+```pug
+<template lang='pug'>
+  // ...
+  img(:src="AmEx")
+  // ...
+</template>
+
+<script>
+import AmEx from '@public/img/icons/icon-amex.svg';
+
+export default {
+  // ...
+  computed: {
+    AmEx() {
+      return AmEx;
+    },
   },
   // ...
 };
