@@ -80,3 +80,21 @@ export default {
 };
 </script>
 ```
+
+3. Styled background:
+
+```pug
+<template lang='pug'>
+  // ...
+  div(:class="$style.icon_right")
+  // ...
+</template>
+
+<style lang="scss" module>
+  .icon_right {
+    // ...
+    background-image: url('../../public/img/icons/icon-mastercard.svg'); // Relative path off current file (./src/views/Home.vue)
+  }
+</style>
+```
+---
