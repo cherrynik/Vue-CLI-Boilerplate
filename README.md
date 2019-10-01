@@ -100,7 +100,7 @@ export default {
 </style>
 ```
 
-And you can also do it like this:
+* And you can also do it like this:
 
 ```pug
 <template lang='pug'>
