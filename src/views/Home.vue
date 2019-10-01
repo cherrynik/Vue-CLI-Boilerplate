@@ -20,12 +20,12 @@
     hr
 
     div(:class="$style.imgGroup")
-      // It doesn't crash if file includes simply, like this (SVG)
+      // It doesn't crash, if file is included simply, like this (SVG)
       img.imgGroup__item(src='@public/img/icon-add.svg')
 
       a.imgGroup__link(href='#') {{ message }}
 
-      // It doesn't crash if file includes simply, like this (PNG)
+      // It doesn't crash, if file is included simply, like this (PNG)
       img.imgGroup__item(src='../../public/img/webpack.png')
 </template>
 
