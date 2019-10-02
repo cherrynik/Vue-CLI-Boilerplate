@@ -23,7 +23,9 @@
       // It doesn't crash, if file is included simply, like this (SVG)
       img.imgGroup__item(src='@public/img/icon-add.svg')
 
-      a.imgGroup__link(href='#') {{ message }}
+      a.imgGroup__link(href='#' v-on:click="counter++")
+        | {{ message }}
+        | ({{ counter }})
 
       // It doesn't crash, if file is included simply, like this (PNG)
       img.imgGroup__item(src='../../public/img/webpack.png')
@@ -48,6 +50,7 @@ export default {
   data() {
     return {
       message: 'Click me',
+      counter: 0,
     };
   },
 };

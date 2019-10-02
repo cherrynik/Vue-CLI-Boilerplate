@@ -899,10 +899,10 @@
     "@types/unist" "*"
     "@types/vfile-message" "*"
 
-"@vue/cli-overlay@^4.0.0-rc.3":
-  version "4.0.0-rc.3"
-  resolved "https://registry.yarnpkg.com/@vue/cli-overlay/-/cli-overlay-4.0.0-rc.3.tgz#79c6052829919b0a66e49cc8db23efdab802c337"
-  integrity sha512-/oHPaU5AEJVSWuqBBxBLAUZs0WD6fCqhpfpMGZwAI/V18NC8xSgQh6xGzo8G5n9YdKOIKSOt34kniyzulgBtOg==
+"@vue/cli-overlay@^4.0.0-rc.6":
+  version "4.0.0-rc.6"
+  resolved "https://registry.yarnpkg.com/@vue/cli-overlay/-/cli-overlay-4.0.0-rc.6.tgz#52a5cb3d98fb4307fd4f859737916fcbdc6db23b"
+  integrity sha512-81r2pF0OsBayKiXFC9H47cIOrslOUN1B+ya7zce6Fz00rM3HCtvfe3FaaSjwXnxmR+qBN4x+OF2bB0535vBCrQ==
 
 "@vue/cli-plugin-eslint@^3.11.0":
   version "3.11.0"
@@ -919,15 +919,15 @@
     eslint "^4.19.1"
     eslint-plugin-vue "^4.7.1"
 
-"@vue/cli-service@^4.0.0-rc.3":
-  version "4.0.0-rc.3"
-  resolved "https://registry.yarnpkg.com/@vue/cli-service/-/cli-service-4.0.0-rc.3.tgz#d6c881fcd012ac3430d2bb4b2b2e5b6247ddc0af"
-  integrity sha512-WHjUNTOihJO41CNHfg/0RPnjB9dgMhTKiXvCbHnIJJA4SX4Ik6jAkfCXlsbBrVyX9UnGAR+B5kcFE+HzbtWeGg==
+"@vue/cli-service@^4.0.0-rc.6":
+  version "4.0.0-rc.6"
+  resolved "https://registry.yarnpkg.com/@vue/cli-service/-/cli-service-4.0.0-rc.6.tgz#48ad231c2d155a3812dc1d9b68ba44e3bfc0df98"
+  integrity sha512-u+LAfpc67Esplswk1POxjlr4+guOsbdO+HW0dd3HqHE/lsCJLbdO01yNDEy61lWDdI8LXS96tnFkC8m0c2RQhg==
   dependencies:
     "@intervolga/optimize-cssnano-plugin" "^1.0.5"
     "@soda/friendly-errors-webpack-plugin" "^1.7.1"
-    "@vue/cli-overlay" "^4.0.0-rc.3"
-    "@vue/cli-shared-utils" "^4.0.0-rc.3"
+    "@vue/cli-overlay" "^4.0.0-rc.6"
+    "@vue/cli-shared-utils" "^4.0.0-rc.6"
     "@vue/component-compiler-utils" "^3.0.0"
     "@vue/preload-webpack-plugin" "^1.1.0"
     "@vue/web-component-wrapper" "^1.2.0"
@@ -998,10 +998,10 @@
     semver "^6.0.0"
     string.prototype.padstart "^3.0.0"
 
-"@vue/cli-shared-utils@^4.0.0-rc.3":
-  version "4.0.0-rc.3"
-  resolved "https://registry.yarnpkg.com/@vue/cli-shared-utils/-/cli-shared-utils-4.0.0-rc.3.tgz#6b45532035b7a1331deafb6f86821af1eee7c72f"
-  integrity sha512-KzbM8HW24pTwp4vR3zncdSTxhP71u0W6EvyhRXfdCvVZgRroKbKa+daB1M/FbYNJ5OU/zjFyQkJdBzDsVvzsvQ==
+"@vue/cli-shared-utils@^4.0.0-rc.6":
+  version "4.0.0-rc.6"
+  resolved "https://registry.yarnpkg.com/@vue/cli-shared-utils/-/cli-shared-utils-4.0.0-rc.6.tgz#efa7bde6605600f6655e6dca4f3de7c07b5eb34b"
+  integrity sha512-2OUC/J8Q/n+dRC5ntDAQmzSpoeJ27mNUFBlHP3tV58AmrWS3h+59sKeiGqC4xVcIOUVmEWnI8A1QU9lc3cqcvA==
   dependencies:
     "@hapi/joi" "^15.0.1"
     chalk "^2.4.1"
@@ -11596,10 +11596,39 @@ webpack-sources@^1.1.0, webpack-sources@^1.4.0, webpack-sources@^1.4.1:
     source-list-map "^2.0.0"
     source-map "~0.6.1"
 
-webpack@^4.0.0, webpack@^4.40.2:
+webpack@^4.0.0:
   version "4.40.2"
   resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.40.2.tgz#d21433d250f900bf0facbabe8f50d585b2dc30a7"
   integrity sha512-5nIvteTDCUws2DVvP9Qe+JPla7kWPPIDFZv55To7IycHWZ+Z5qBdaBYPyuXWdhggTufZkQwfIK+5rKQTVovm2A==
+  dependencies:
+    "@webassemblyjs/ast" "1.8.5"
+    "@webassemblyjs/helper-module-context" "1.8.5"
+    "@webassemblyjs/wasm-edit" "1.8.5"
+    "@webassemblyjs/wasm-parser" "1.8.5"
+    acorn "^6.2.1"
+    ajv "^6.10.2"
+    ajv-keywords "^3.4.1"
+    chrome-trace-event "^1.0.2"
+    enhanced-resolve "^4.1.0"
+    eslint-scope "^4.0.3"
+    json-parse-better-errors "^1.0.2"
+    loader-runner "^2.4.0"
+    loader-utils "^1.2.3"
+    memory-fs "^0.4.1"
+    micromatch "^3.1.10"
+    mkdirp "^0.5.1"
+    neo-async "^2.6.1"
+    node-libs-browser "^2.2.1"
+    schema-utils "^1.0.0"
+    tapable "^1.1.3"
+    terser-webpack-plugin "^1.4.1"
+    watchpack "^1.6.0"
+    webpack-sources "^1.4.1"
+
+webpack@^4.41.0:
+  version "4.41.0"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.41.0.tgz#db6a254bde671769f7c14e90a1a55e73602fc70b"
+  integrity sha512-yNV98U4r7wX1VJAj5kyMsu36T8RPPQntcb5fJLOsMz/pt/WrKC0Vp1bAlqPLkA1LegSwQwf6P+kAbyhRKVQ72g==
   dependencies:
     "@webassemblyjs/ast" "1.8.5"
     "@webassemblyjs/helper-module-context" "1.8.5"
